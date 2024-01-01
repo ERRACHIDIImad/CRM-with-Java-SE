@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="BorderPane" fx:id="ID" prefHeight="637.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController3">
+   <center>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: #F3F3F3;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="40.0" layoutY="31.0" prefHeight="250.0" prefWidth="850.0" styleClass="pane" stylesheets="@application.css" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Analytics" textFill="#2b49b3">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator orientation="VERTICAL">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Label fx:id="Host_name" layoutX="130.0" layoutY="25.0" prefHeight="17.0" prefWidth="38.0">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="date_sys" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" textFill="#808080" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="201.0" prefWidth="222.0" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="30.0" top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <VBox prefHeight="226.0" prefWidth="342.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox prefHeight="190.0" prefWidth="677.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane layoutX="110.0" layoutY="25.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="310.0" styleClass="uncolored_space_general_info" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="30.0" top="15.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <Label layoutX="26.0" layoutY="14.0" prefHeight="36.0" prefWidth="183.0" text="Client of year : " textFill="#1563ff">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="year" layoutX="104.0" layoutY="52.0" prefHeight="31.0" prefWidth="97.0" />
+                                          <Label layoutX="28.0" layoutY="51.0" prefHeight="27.0" prefWidth="57.0" text="Year: ">
+                                             <font>
+                                                <Font size="22.0" />
+                                             </font>
+                                          </Label>
+                                          <Button layoutX="236.0" layoutY="52.0" mnemonicParsing="false" onMouseClicked="#search_best_client" prefHeight="33.0" prefWidth="69.0" text="Search" />
+                                          <HBox layoutX="-2.0" layoutY="97.0" prefHeight="114.0" prefWidth="458.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="97.0">
+                                             <children>
+                                                <Label fx:id="code" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="114.0" prefWidth="108.0" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="41.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="soc" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="114.0" prefWidth="291.0" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="41.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </AnchorPane>
+                                    <Separator orientation="VERTICAL" prefHeight="200.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                    </Separator>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <AnchorPane prefHeight="800.0" prefWidth="220.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <HBox layoutX="1.0" layoutY="-1.0" prefHeight="34.0" prefWidth="344.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="4.0">
+                                 <children>
+                                    <Label text="These products categories are never ordred" textFill="#2b49b3" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="15.0" right="-5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <FontAwesomeIconView fill="#2b49b3" glyphName="SORT_DOWN" size="1.3em" text="" wrappingWidth="16.91428565979004" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </FontAwesomeIconView>
+                                 </children></HBox>
+                              <ListView fx:id="non_commanded_categories_clt" layoutX="7.0" layoutY="31.0" prefHeight="195.0" prefWidth="327.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="15.0" />
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox layoutX="81.0" layoutY="333.0" prefHeight="276.0" prefWidth="820.0" spacing="30.0" styleClass="uncolored_space_general_info" stylesheets="@application.css" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="81.0" AnchorPane.rightAnchor="62.0" AnchorPane.topAnchor="333.0">
+               <children>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="276.0" prefWidth="702.0" styleClass="container" stylesheets="@application.css" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <children>
+                        <VBox prefHeight="276.0" prefWidth="562.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ScatterChart fx:id="bubble" prefHeight="266.0" prefWidth="864.0" VBox.vgrow="ALWAYS">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                                 <VBox.margin>
+                                    <Insets top="10.0" />
+                                 </VBox.margin>
+                              </ScatterChart>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="637.0" prefWidth="56.0" styleClass="sidebar" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView glyphName="BARS" layoutX="17.0" layoutY="41.0" size="1.5em" />
+            <AnchorPane layoutX="3.0" layoutY="241.0" prefHeight="210.0" prefWidth="43.0">
+               <children>
+                  <FontAwesomeIconView fill="#1563ff" glyphName="LIST_UL" layoutX="12.0" layoutY="91.0" size="1.5em" />
+                  <FontAwesomeIconView glyphName="IMAGE" layoutX="12.0" layoutY="52.0" onMouseClicked="#handlemousclicked2" size="1.5em" styleClass="sidebar_opt" />
+                  <FontAwesomeIconView glyphName="PRINT" layoutX="14.0" layoutY="123.0" onMouseClicked="#handlemousclicked3" size="1.5em" styleClass="sidebar_opt" />
+                  <FontAwesomeIconView glyphName="PLUS" layoutX="15.0" layoutY="166.0" size="1.5em" />
+                  <Separator layoutX="11.0" layoutY="136.0" prefHeight="4.0" prefWidth="25.0" />
+               </children>
+            </AnchorPane>
+            <FontAwesomeIconView fill="#1563ff" glyphName="HOME" layoutX="16.0" layoutY="248.0" onMouseClicked="#handlemousclicked" size="1.5em" styleClass="sidebar_opt" text="" />
+            <Circle fill="WHITE" layoutX="28.0" layoutY="604.0" radius="19.0" stroke="#c1c1c1" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="BorderPane" fx:id="ID" onKeyTyped="#product_saison_year" prefHeight="637.0" prefWidth="1019.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController2">
+   <center>
+      <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" style="-fx-background-color: #F3F3F3;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox layoutX="40.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="637.0" prefWidth="883.0" styleClass="pane" stylesheets="@application.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label text="Costumer's behavior" textFill="#2b49b3">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator maxHeight="20.0" maxWidth="20.0" orientation="VERTICAL" HBox.hgrow="NEVER">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Label text="Hello">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Host_name" layoutX="130.0" layoutY="25.0" prefHeight="17.0" prefWidth="38.0">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label layoutX="130.0" layoutY="25.0" text=",  welcome back!">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="date_sys" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" nodeOrientation="LEFT_TO_RIGHT" textFill="#808080" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font name="Arial Bold" size="15.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </HBox>
+                  <AnchorPane prefHeight="788.0" prefWidth="881.0">
+                     <children>
+                        <HBox layoutY="-4.0" prefHeight="340.0" prefWidth="864.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="-4.0">
+                           <children>
+                              <VBox fx:id="vbox" prefHeight="624.0" prefWidth="359.0">
+                                 <children>
+                                    <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="318.0" text="Désignation produit" textFill="#1563ff">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <TextField fx:id="saison" maxHeight="-Infinity" maxWidth="350.0" prefHeight="31.0" prefWidth="298.0">
+                                       <VBox.margin>
+                                          <Insets left="20.0" top="10.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                    <Button alignment="CENTER" contentDisplay="RIGHT" maxHeight="20.0" maxWidth="120.0" minWidth="50.0" mnemonicParsing="false" onMouseClicked="#search_saison_data" prefHeight="20.0" prefWidth="100.0" text="Search" VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets left="250.0" top="10.0" />
+                                       </VBox.margin>
+                                    </Button>
+                                    <HBox prefHeight="23.0" prefWidth="359.0">
+                                       <children>
+                                          <VBox prefHeight="66.0" prefWidth="169.0">
+                                             <children>
+                                                <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="30.0" prefWidth="94.0" text="Produit de saison :" textFill="#1563ff">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets left="20.0" top="8.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <HBox prefHeight="31.0" prefWidth="155.0">
+                                                   <children>
+                                                      <Label fx:id="produit_saison" prefHeight="26.0" prefWidth="59.0" text="Year">
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="20.0" top="2.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <TextField fx:id="yr" prefHeight="31.0" prefWidth="78.0">
+                                                         <HBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox prefHeight="73.0" prefWidth="190.0">
+                                             <HBox.margin>
+                                                <Insets />
+                                             </HBox.margin>
+                                             <children>
+                                                <HBox prefHeight="29.0" prefWidth="190.0">
+                                                   <children>
+                                                      <Label prefHeight="26.0" prefWidth="111.0" text="Season">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" top="12.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font size="17.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <TextField fx:id="s" prefHeight="31.0" prefWidth="144.0">
+                                                         <HBox.margin>
+                                                            <Insets top="11.0" />
+                                                         </HBox.margin>
+                                                      </TextField>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <Button alignment="CENTER" contentDisplay="RIGHT" maxHeight="-Infinity" maxWidth="200.0" minWidth="42.0" mnemonicParsing="false" onMouseClicked="#product_saison_year" prefHeight="31.0" prefWidth="50.0" text="Go">
+                                                         <HBox.margin>
+                                                            <Insets left="145.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="37.0" prefWidth="338.0">
+                                       <children>
+                                          <Label maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="71.0" text="Client" textFill="#1563ff">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <Label layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="42.0" prefWidth="71.0" text="Société" textFill="#1563ff">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets left="110.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="32.0" prefWidth="338.0">
+                                       <children>
+                                          <TextField fx:id="clt" maxHeight="-Infinity" maxWidth="200.0" prefHeight="31.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <TextField fx:id="soc" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" prefHeight="31.0" prefWidth="150.0" HBox.hgrow="ALWAYS">
+                                             <HBox.margin>
+                                                <Insets left="20.0" top="5.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="337.0" prefWidth="338.0">
+                                       <children>
+                                          <HBox prefHeight="33.0" prefWidth="359.0">
+                                             <children>
+                                                <Button alignment="CENTER" contentDisplay="RIGHT" layoutX="260.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="200.0" minWidth="50.0" mnemonicParsing="false" onAction="#search_CA_client_data" onMouseClicked="#search_CA_client_data" prefHeight="31.0" prefWidth="107.5" text="Search" HBox.hgrow="ALWAYS">
+                                                   <HBox.margin>
+                                                      <Insets left="250.0" top="10.0" />
+                                                   </HBox.margin></Button>
+                                             </children>
+                                          </HBox>
+                                          <PieChart fx:id="bubble1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#search_CA_client_data" prefHeight="254.0" prefWidth="359.0" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets top="50.0" />
+                                             </VBox.margin>
+                                          </PieChart>
+                                          <Label alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="475.0" text="Annual Revenue per client" VBox.vgrow="ALWAYS">
+                                             <font>
+                                                <Font name="Arial Bold" size="21.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="589.0" prefWidth="344.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <AnchorPane prefHeight="37.0" prefWidth="491.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="produit_saison1" alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="-4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-4.0">
+                                             <font>
+                                                <Font size="33.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </AnchorPane>
+                                    <PieChart fx:id="bubble" prefHeight="538.0" prefWidth="451.0" VBox.vgrow="ALWAYS">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </PieChart>
+                                    <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="27.0" prefWidth="475.0" text="Product Revenue per seasons" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Arial Bold" size="21.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="637.0" prefWidth="56.0" styleClass="sidebar" stylesheets="@application.css" BorderPane.alignment="CENTER">
+         <children>
+            <FontAwesomeIconView glyphName="BARS" layoutX="17.0" layoutY="41.0" size="1.5em" />
+            <AnchorPane layoutX="3.0" layoutY="241.0" prefHeight="210.0" prefWidth="43.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="LIST_UL" layoutX="13.0" layoutY="90.0" onMouseClicked="#handlemousclicked3" size="1.5em" styleClass="sidebar_opt" />
+                  <FontAwesomeIconView fill="#1563ff" glyphName="IMAGE" layoutX="11.0" layoutY="48.0" size="1.5em" text="" />
+                  <FontAwesomeIconView glyphName="PRINT" layoutX="14.0" layoutY="123.0" onMouseClicked="#handlemousclicked4" size="1.5em" styleClass="sidebar_opt" />
+                  <FontAwesomeIconView glyphName="PLUS" layoutX="15.0" layoutY="166.0" size="1.5em" />
+                  <Separator layoutX="11.0" layoutY="136.0" prefHeight="4.0" prefWidth="25.0" />
+               </children>
+            </AnchorPane>
+            <FontAwesomeIconView fill="#1563ff" glyphName="HOME" layoutX="16.0" layoutY="248.0" onMouseClicked="#handlemousclicked1" size="1.5em" styleClass="sidebar_opt" text="" />
+            <Circle fill="WHITE" layoutX="28.0" layoutY="604.0" radius="19.0" stroke="#c1c1c1" strokeType="INSIDE" />
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
